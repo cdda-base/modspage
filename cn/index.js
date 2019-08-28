@@ -1,5 +1,5 @@
 var mods = null;
-var pagemax = 12;
+var pagemax = 32;//考虑根据不同设备调整？
 //加载页面
 function LoadMods(pageindex) {
 	$(".Mods").empty();
@@ -9,28 +9,61 @@ function LoadMods(pageindex) {
 		var mod = mods[i];
 		var content = "<div class=\"Mod\">";
 
-		content += "<h4>" + mod.modname + "</h4>"
+		content += "<div class='container'>"
+		content += "<div class='title'>"
+		content += "<h2 class=''>" + mod.modname + "</h2>"
+		// content += "<i class='fa fa-envelope'></i>"
+		content += "</div>"
+		content += "<div class='subtitle'>"
 
-		content += "<p class=\"tag\">";
+		content += "<div class='fl'>"
+
+		content += "<div class='ic'>"
+		content += "<div class='e'>"
 		for (var j = 0; j < mod.tags.length; j++) {
-			content += mod.tags[j] + " ";
+			content += "<p class=\"tag\">";
+			content += mod.tags[j] + "";
+			content += "</p>";
 		}
-		content += "</p>";
 
-		content += "<p class=\"author\" id=\"" + i + "\">作者：" + mod.author + "</p>";
+		content += "</div>"
+		content += "</div>"
+		content += "</div>"
+		content += "<div class='am fr'>"
+
+		content += "<div class=\"author\" id=\"" + i + "\">";
+		content += "<i class='fa fa-user'></i>"
+		content += mod.author
+		content += " </div>"
+
+		content += "<p class=\"Modver\">" + "版本：" + mod.ver + "</p>";
+		content += "</div>"
+		content += "</div>"
+		content += "</div>"
+
+		content += '<hr>'
+
+
+
+
+
 		//获取作者信息
 		LoadAuthorInfo(mod.author, i);
 
-		content += "<p class=\"Modver\">版本：" + mod.ver + "</p>";
 
+		content += "<div class='e'>"
 		content += "<p class=\"Msg\">" + mod.info + "</p>";
 
 		if (mod.warning != undefined) {
 			content += "<p class=\"warning\">" + mod.warning + "</p>";
 		}
+		content += "<div class='footer'>"
 
-		content += "<a class=\"download\" href=\"" + mod.addr + "\">下载</a>"
-
+		content += "<a class=\"download\" href=\"" + mod.addr + "\">"
+		content += "<i class='fa fa-download'></i>"
+		content += "下载</a>"
+		content += "</div>"
+		content += "</div>"
 		content += "</div>"
 
 		$(".Mods").append(content);
@@ -50,7 +83,7 @@ function LoadMods(pageindex) {
 function LoadAuthorInfo(name, id) {
 	$.getJSON("../../authors/" + name + ".json", function (data) {
 		if (data.email != undefined) {
-			$("#" + id).after("<p class=\"authormsg\">作者邮箱：" + data.email + " </p>");
+			$("#" + id).append("<i class='fa fa-envelope'></i>" + data.email);
 		}
 
 	});

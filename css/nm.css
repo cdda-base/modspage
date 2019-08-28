@@ -1,0 +1,256 @@
+.header {
+    font-family: 'Hoefler Text', 'Microsoft YaHei Light', 'Segoe UI Light';
+    font-size: 1.75rem;
+    text-align: center;
+    background: #363636;
+    overflow: hidden;
+    color: #f5f5f5;
+    padding: 3rem;
+}
+
+.Mod {
+    transition: box-shadow 200ms;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    padding: 1.75rem;
+    /* float: left; */
+    display: inline-block;
+    margin: 0.75rem;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+}
+
+.Mod:hover {
+    box-shadow: 0 3px 6px rgba(10, 10, 10, 0.08);
+}
+
+.Mod .tag {
+    border: 1px solid #dbdbdb;
+    padding: 0 0.5rem;
+    display: inline-block;
+    font-size: 0.67rem;
+    color: #b9b9b9;
+    margin: 0.25rem;
+    line-height: 1.5rem;
+}
+
+/* .Mod .container .title{
+    float: left;
+} */
+
+.Mod .subtitle .am {
+    text-align: right;
+    color: #7d7d7d;
+    font-size: 0.67rem;
+}
+
+.Mod .subtitle {
+    transition: right 200ms;
+    overflow: hidden;
+    width: 200%;
+    right: 100%;
+    position: relative;
+}
+
+.Mod .subtitle .e {
+    white-space: nowrap;
+    width: 244px;
+}
+
+.Mod:hover .subtitle {
+    overflow: hidden;
+    width: 200%;
+    right: 0%;
+    position: relative;
+}
+
+.Mod .fl {
+    width: 50%;
+    height: 0;
+    position: relative;
+}
+
+.Mod .fl:hover {
+    right: 0;
+}
+
+.Mod .fr {
+    width: 50%;
+}
+
+.Mod .container {
+    overflow: hidden;
+    box-shadow: -16rem 0px 0px 0px rgba(10, 10, 10, 0.1);
+}
+
+.Mod .footer {
+    position: absolute;
+    /* right: 1.75rem; */
+    bottom: 1.75rem;
+    width: 244px;
+}
+
+.Mod .footer .download {
+    position: relative;
+    /* right: 0; */
+    float: right;
+}
+
+.Mods {
+    /* float: left; */
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1866px) {
+    .Mods {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1636px) {
+    .Mods {
+        width: 100%;
+    }
+}
+
+#changepage{
+    text-align: center;
+}
+
+
+
+
+
+
+a {
+    color: #57A3E8;
+    text-decoration: none;
+}
+
+footer {
+    background: whitesmoke;
+    padding: 3rem;
+    text-align: center;
+}
+
+
+
+
+
+
+/* .e,
+.oc {
+    height: 2rem;
+    
+    height: 150px;
+} */
+
+.oc {
+    position: relative;
+    overflow: hidden;
+}
+
+.ic {
+    position: absolute;
+    left: 0;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.ic::-webkit-scrollbar {
+    display: none;
+}
+
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+html {
+    box-sizing: border-box;
+    color: #4a4a4a;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6:first-child {
+    margin-bottom: 0;
+}
+
+hr {
+    background-color: #dbdbdb;
+    border: none;
+    display: block;
+    height: 1px;
+    margin: 1.5rem 0;
+}
+
+/* 为了对齐中文字体 */
+.fa-download {
+    vertical-align: bottom;
+}
