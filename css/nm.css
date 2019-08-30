@@ -18,7 +18,7 @@
     overflow: hidden;
     width: 300px;
     /* height: 350px; */
-    height: 375px;
+    height: 400px;
     /* height: 485px; */
     margin: .75rem;
     padding: 1.75rem;
@@ -43,9 +43,9 @@
     border: 1px solid #dbdbdb;
 }
 
-/* .Mod .container .title{
-    float: left;
-} */
+.Mod .container .title{
+    margin-bottom: .25rem;
+}
 
 .Mod .subtitle .am {
     font-size: .75rem;
@@ -283,5 +283,5 @@ hr {
 
 /* 为了对齐中文字体 */
 .fa-download {
-    vertical-align: bottom;
+    vertical-align: middle;
 }
