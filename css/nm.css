@@ -1,5 +1,9 @@
+/* body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+} */
+
 .header {
-    font-family: 'Hoefler Text', 'Microsoft YaHei Light', 'Segoe UI Light';
+    font-family: 'Hoefler Text', 'Microsoft YaHei Light', 'Segoe UI Light', "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 1.75rem;
     overflow: hidden;
     padding: 3rem;
@@ -29,11 +33,12 @@
 }
 
 .Mod .tag {
-    font-size: .67rem;
+    font-size: .75rem;
     line-height: 1.5rem;
     display: inline-block;
-    margin: .25rem;
-    padding: 0 .5rem;
+    margin: 0 .5rem 0 0;
+    /* padding: 0 .5rem; */
+    padding: calc(.25rem - 1px) .5rem;
     color: #b9b9b9;
     border: 1px solid #dbdbdb;
 }
@@ -43,7 +48,7 @@
 } */
 
 .Mod .subtitle .am {
-    font-size: .67rem;
+    font-size: .75rem;
 
     text-align: right;
     color: #7d7d7d;
@@ -77,6 +82,7 @@
 
     width: 50%;
     height: 2rem;
+    overflow: hidden;
 }
 
 .Mod .fl:hover {
